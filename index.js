@@ -35,7 +35,7 @@ app.post("/",(req,resp)=>
                     pprice:req.body.pprice,
                     pcat:req.body.pcat,
                     pdesc:req.body.pdesc,
-                    pimg:"http://localhost:4000/uploads/"+req.file.filename
+                    pimg:"https://amazon-zch2.onrender.com/uploads/"+req.file.filename
                     
                 })
                 const entry=newData.save()
@@ -48,4 +48,4 @@ app.get("/",async(req,resp)=>
     const data=await pSchema.find()
     resp.send(data)
 })
-app.listen(4000)
+app.listen(5000)
